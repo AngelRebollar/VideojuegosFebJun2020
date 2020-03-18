@@ -8,8 +8,10 @@ public class BalaE : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Respawn" || collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Respawn" || collision.gameObject.tag == "Player")
             Destroy(gameObject);
 
+        Destroy(gameObject);
+ 
     }
 }

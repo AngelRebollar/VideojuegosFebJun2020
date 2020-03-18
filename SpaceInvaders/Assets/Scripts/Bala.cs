@@ -13,15 +13,19 @@ public class Bala : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemigo")
+        if(collision.gameObject.tag == "Enemigo")
+        {
             Destroy(collision.gameObject);
+            Nave.navesE--;
+            if (Nave.navesE == 0)
+                Debug.Log("¡Ganaste, Felicidades!");
+        }
 
         Destroy(gameObject);
-        
     }
 }
